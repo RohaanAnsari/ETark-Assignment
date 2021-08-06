@@ -64,7 +64,7 @@ exports.signin = (req, res) => {
         }
       })
       .catch((err) => {
-        console.log('errorrrr', err);
+        console.log('error', err);
       });
   });
 };

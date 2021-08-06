@@ -33,8 +33,10 @@ app.use(express.json());
 
 // routes
 const authRoutes = require('./routes/auth');
+const homeRoute = require('./routes/home');
 
 app.use('/api', authRoutes);
+app.use('/api', homeRoute);
 
 var PORT = process.env.PORT || 5000;
 
