@@ -39,7 +39,7 @@ exports.signin = (req, res) => {
   if (!email || !password) {
     return res.status(206).json({ error: 'Please add email and password' });
   }
-  // Finding the user with the email provided in the body
+  // Find the user with the email provided in the body
   User.findOne({ email }).then((savedUser) => {
     if (!savedUser) {
       return res.status(206).json({ error: 'Invalid Email or password' });
